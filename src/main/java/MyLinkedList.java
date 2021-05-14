@@ -1,4 +1,4 @@
-public class MyLinkedList {
+public class MyLinkedList<K extends Comparable<K>> {
     public INode head;
     public INode tail;
 
@@ -88,6 +88,26 @@ public class MyLinkedList {
             node = node.getNext();
         }
         System.out.println("Size of LinkedList is: " + count);
+    }
+    //UC10
+    public void sortedLinkedList(INode<K> newNode) {
+        INode tempNode = head;
+        INode prevNode = null;
+        while (tempNode != null && (newNode.getKey()).compareTo((K) tempNode.getKey()) > 0) {
+            prevNode = tempNode;
+            tempNode = tempNode.getNext();
+        }
+        if (prevNode == null) {
+            this.head = newNode;
+        } else {
+            prevNode.setNext(newNode);
+        }
+        newNode.setNext(tempNode);
+        tempNode =head;
+        while (tempNode!=null){
+            this.tail=tempNode;
+            tempNode=tempNode.getNext();
+        }
     }
 
     public void printMyNodes(){

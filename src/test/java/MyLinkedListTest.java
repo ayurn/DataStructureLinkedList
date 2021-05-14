@@ -151,4 +151,20 @@ public class MyLinkedListTest {
                 myLinkedList.tail.equals(myFourthNode);
         Assertions.assertTrue(result);
     }
+
+    @Test
+    public void given4NumbersSortThem() {
+        MyNode<Integer> myFirstNode = new MyNode<Integer>(56);
+        MyNode<Integer> mySecondNode = new MyNode<Integer>(30);
+        MyNode<Integer> myThirdNode = new MyNode<Integer>(40);
+        MyNode<Integer> myFourthNode = new MyNode<Integer>(70);
+        MyLinkedList<Integer> myLinkedList = new MyLinkedList<Integer>();
+        myLinkedList.sortedLinkedList(myFirstNode);
+        myLinkedList.sortedLinkedList(mySecondNode);
+        myLinkedList.sortedLinkedList(myThirdNode);
+        myLinkedList.sortedLinkedList(myFourthNode);
+        myLinkedList.printMyNodes();
+        boolean result =  myLinkedList.head.getNext().equals(myThirdNode) && myLinkedList.tail.equals(myFourthNode);
+        Assertions.assertEquals(true,result);
+    }
 }

@@ -11,7 +11,7 @@ public class MyNodeTest {
         myFirstNode.setNext(mySecondNode);
         mySecondNode.setNext(myThirdNode);
         boolean result = myFirstNode.getNext().equals(mySecondNode)&&
-                        mySecondNode.getNext().equals(myThirdNode);
+                         mySecondNode.getNext().equals(myThirdNode);
         Assertions.assertTrue(result);
     }
 }

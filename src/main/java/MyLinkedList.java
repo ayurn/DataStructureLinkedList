@@ -68,6 +68,28 @@ public class MyLinkedList {
 
     }
 
+    //UC9 DELETE AND GET SIZE OF LINKED LIST
+    public void delete(INode deleteNode) {
+        INode tempNode1 = head;
+        while (tempNode1.getNext() != deleteNode) {
+            tempNode1 = tempNode1.getNext();
+        }
+        INode tempNode2 = tempNode1;
+        tempNode1 = tempNode1.getNext();
+        tempNode1 = tempNode1.getNext();
+        tempNode2.setNext(tempNode1);
+    }
+
+    public void size(INode head) {
+        int count = 0;
+        INode node = head;
+        while (node != null) {
+            count++;
+            node = node.getNext();
+        }
+        System.out.println("Size of LinkedList is: " + count);
+    }
+
     public void printMyNodes(){
         StringBuffer myNodes = new StringBuffer("My Nodes: ");
         INode tempNode = head;

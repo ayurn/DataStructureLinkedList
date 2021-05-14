@@ -32,6 +32,18 @@ public class MyLinkedList implements INode{
         System.out.println(myNodes);
     }
 
+    public void append(INode newNode) {
+        if(this.head == null)
+            this.head = newNode;
+        if(this.tail == null)
+            this.tail = newNode;
+        else {
+            INode tempNode = this.tail;
+            this.tail = newNode;
+            tempNode.setNext(newNode);
+        }
+    }
+
     @Override
     public Object getKey() {
         return null;

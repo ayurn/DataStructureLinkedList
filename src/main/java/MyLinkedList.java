@@ -38,6 +38,13 @@ public class MyLinkedList implements INode{
         myNode.setNext(newNode);
     }
 
+    //UC5 DELETE THE FIRST ELEMENT
+    public INode pop() {
+        INode  tempNode = this.head;
+        this.head = head.getNext();
+        return tempNode;
+    }
+
     public void printMyNodes(){
         StringBuffer myNodes = new StringBuffer("My Nodes: ");
         INode tempNode = head;
@@ -50,7 +57,6 @@ public class MyLinkedList implements INode{
         myNodes.append(tempNode.getKey());
         System.out.println(myNodes);
     }
-
 
     @Override
     public Object getKey() {

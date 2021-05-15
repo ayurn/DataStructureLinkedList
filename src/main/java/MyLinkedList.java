@@ -57,7 +57,7 @@ public class MyLinkedList<K extends Comparable<K>> {
         return tempNode;
     }
 
-    //UC7 SEARCH LINKEDLIST TO FIND NODE WITH KEY 30
+    //UC7 SEARCH LINKED LIST TO FIND NODE WITH KEY 30
     public void search(INode myNode){
         INode tempNode = head;
         while (tempNode.getNext()!=myNode){

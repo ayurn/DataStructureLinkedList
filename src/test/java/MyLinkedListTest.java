@@ -142,7 +142,7 @@ public class MyLinkedListTest {
         myLinkedList.append(myFourthNode);
         myLinkedList.printMyNodes();
         myLinkedList.search(myThirdNode);
-        myLinkedList.delete(myThirdNode);
+        myLinkedList.delete((Comparable) myThirdNode);
         myLinkedList.printMyNodes();
         myLinkedList.size(myFirstNode);
 

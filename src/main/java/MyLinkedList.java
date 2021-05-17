@@ -68,6 +68,18 @@ public class MyLinkedList<K extends Comparable<K>> {
 
     }
 
+    public INode<K> searchKey(K key) {
+        INode<K> tempNode = head;
+        while (tempNode != null && tempNode.getNext() != null){
+            if(tempNode.getKey().equals((K) key)){
+                return tempNode;
+            }
+
+            tempNode = tempNode.getNext();
+        }
+        return null;
+    }
+
     //UC9 DELETE AND GET SIZE OF LINKED LIST
     public void delete(INode deleteNode) {
         INode tempNode1 = head;
